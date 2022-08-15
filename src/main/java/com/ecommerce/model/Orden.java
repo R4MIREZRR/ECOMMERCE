@@ -1,13 +1,20 @@
 package com.ecommerce.model;
 
+import javax.persistence.*;
 import java.sql.Date;
-
+@Entity
+@Table(name = "ordenes")
 public class Orden {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String numero;
     private Date fechaCreacion;
     private Date fechaRecibida;
     private double total;
+
+
 
     public Orden() {
     }
